@@ -1,0 +1,78 @@
+{%extends "base.html" %} 
+
+
+{% block title %} 台灣揚帆協會 財務報表 {% endblock %}
+
+{% block content %}
+    
+   <section class="container content py-5">
+
+        <h1 class="text-center text-primary pt-3">財務報表</h1>
+        <p class="text-center pb-5 light-300">
+            感謝您們對我們的幫助，以下是我們109年度的財務報表，竟請參閱
+        </p>
+
+        <div class="row d-flex align-items-center pb-5">
+
+                <!-- Start Pricing List -->
+                <div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+                    <div class="row p-2">
+                        <div class="pricing-list-icon col-4 text-center m-auto text-secondary ml-5 py-2">
+                            <i class="fas fa-hand-holding-usd icon-report"></i>
+                            
+                        </div>
+                        <div class="pricing-list-body col-4 align-items-center pl-3 pt-2">
+                            <ul class="list-unstyled text-center light-300">
+                                <li class="h5 semi-bold-600 mb-0 mt-3">109年捐款明細</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-list-footer col-4 text-center m-auto align-items-center">
+                            <a href="static/report_file/109年捐款明細.xlsx"  download="109年捐款明細.xlsx" class="btn rounded-pill px-4 btn-download light-300">下載</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Pricing List -->
+
+                <!-- Start Pricing List -->
+                <div class="pricing-list shadow-sm py-sm-0 py-5">
+                    <div class="row p-2">
+                        <div class="pricing-list-icon col-4 text-center m-auto text-secondary ml-5 py-2">
+                            <i class="fas fa-file-invoice-dollar icon-report"></i>
+                        </div>
+                        <div class="pricing-list-body col-4 align-items-center pl-3 pt-2">
+                            <ul class="list-unstyled text-center light-300">
+                                <li class="h5 semi-bold-600 mb-0 mt-3">109年損益表</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-list-footer col-4 text-center m-auto align-items-center">
+                            <a href="static/report_file/109年損益表.pdf"  download="109年損益表.pdf" class="btn rounded-pill px-4 btn-download light-300">下載</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Pricing List -->
+
+                <!-- Start Pricing List -->
+                <div class="pricing-list shadow-sm rounded-botton rounded-3 py-sm-0 py-5">
+                    <div class="row p-2">
+                        <div class="pricing-list-icon col-4 text-center m-auto text-secondary ml-5 py-2">
+                            <i class="fas fa-file icon-report"></i>
+                        </div>
+                        <div class="pricing-list-body col-4 align-items-center pl-3 pt-2">
+                            <ul class="list-unstyled text-center light-300">
+                                <li class="h5 semi-bold-600 mb-0 mt-3">109年資產負債表</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-list-footer col-4 text-center m-auto align-items-center">
+
+                            <a href="static/report_file/109年資產負債表.pdf"  download="109年資產負債表.pdf" class="btn rounded-pill px-4 btn-download light-300">下載</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Pricing List -->
+
+            </div>
+    </section>    
+
+
+ 
+{% endblock %}

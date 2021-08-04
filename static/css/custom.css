@@ -1,0 +1,239 @@
+/*
+Custom CSS for TemplateMo 561 Purple Buzz
+
+https://templatemo.com/tm-561-purple-buzz*/
+
+.carousel-control-prev{top:150px;bottom:150px;}
+.carousel-control-next{top:150px;bottom:150px;}
+
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:55px;
+}
+
+.content {
+  box-sizing: border-box;/*為元素指定的任何內邊距和邊框都將在已設定的寬度和高度內進行繪製*/
+  min-height: 100%;
+  position:relative;
+}
+
+
+.carousel-control-next-icon{
+    background-color:#d7978c;
+}
+.carousel-control-prev-icon{
+    background-color:#d7978c;
+}
+.carousel-control-prev{
+    background-color:transparent;
+    border-color:transparent;
+}
+.carousel-control-next{
+    background-color:transparent;
+    border-color:transparent;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f8f8f8;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+
+.dropdown a:hover {background-color: #d7978c;}
+
+.show {display: block;}
+
+
+
+
+
+.btn-download{
+    color:#d7978c;
+    background-color:#d7978c;
+    border-color:#d7978c;
+    color:#fff;
+
+}
+
+.icon-report{
+    font-weight:300;
+    line-height:1.2;
+    color:#d7978c;
+    font-size: 50px;
+}
+
+
+.icon-contact{
+    font-weight:300;
+    line-height:1.2;
+    color:#d7978c;
+    font-size: 25px;
+}
+
+
+.icon-contact-bg{
+    font-weight:300;
+    line-height:1.2;
+    color:#d7978c;
+    font-size: 65px;
+}
+
+.bx-contact{font-size:1.2rem!important}
+
+.bx-dropdown{font-size:1.2rem!important}
+
+.bx-fb{font-size:2.00rem!important}
+
+.bx-donate{font-size:1.9rem!important}
+
+.img-fluid-QRcode{width:50%;height:auto}
+
+.img-home{
+    width:75%;
+    height:auto;
+    display: block;
+    margin: 0 auto;
+    vertical-align : middle;
+    
+}
+
+.img-about{
+    width:80%;
+    height:auto;
+
+}
+
+.img-logo{
+    width:200px;
+    height:auto;
+}
+.light-donate {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.light-donate-QRcode {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+  font-size: 25px;
+}
+
+.light-donate-note {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.light-about {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+  font-size: 25px;
+}
+
+.typo-space-line-home::after {
+  content: "";
+  width: 400px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid #DDDDDD;
+  padding-top: .5em;
+}
+
+.typo-space-line-afterclass::after,
+.typo-space-line-afterclass::after {
+  content: "";
+  width: 200px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid #DDDDDD;
+  padding-top: .5em;
+}
+
+.typo-space-line-camp::after {
+  content: "";
+  width: 450px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid #DDDDDD;
+  padding-top: .5em;
+  margin: auto;
+}
+
+
+
+.typo-space-line-donate::after {
+  content: "";
+  width: 800px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid #DDDDDD;
+  padding-top: .5em;
+  margin: auto;
+}
+.typo-space-line-center-donate::after {
+  left: 50%;
+  margin-left: -75px;
+
+}
+
+
+
+.typo-space-line::after,
+.typo-space-line-center::after {
+  content: "";
+  width: 250px;
+  display:block;
+  position: absolute;
+  border-bottom:  5px solid #DDDDDD;
+  padding-top: .5em;
+}
+.typo-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+
+
+.text-primary{color:#d7978c!important}
+
+
+
+.rounded-about{border-radius:50rem!important}
+.btn-outline-about{background-color:transparent;border-color:transparent}
+.btn-outline-about:hover{color:#d7978c;background-color:#d7978c;border-color:transparent}
+.btn-outline-about:active {
+  border-color:transparent;background-color: transparent;
+}
+.btn-outline-about:check {
+  border-color:#d7978c;background-color: #d7978c;
+}
+
+
+.btn-outline-carousel{color:#d7978c;border-color:#d7978c}.btn-check:active+.btn-outline-carousel,.btn-check:checked+.btn-outline-carousel,.btn-outline-carousel.active,.btn-outline-carousel.dropdown-toggle.show,.btn-outline-carousel:active,.btn-outline-carousel:hover{color:white;background-color:#d7978c;border-color:#d7978c;}.btn-check:focus+.btn-outline-carousel,.btn-outline-carousel:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-check:active+.btn-outline-carousel:focus,.btn-check:checked+.btn-outline-carousel:focus,.btn-outline-carousel.active:focus,.btn-outline-carousel.dropdown-toggle.show:focus,.btn-outline-carousel:active:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-outline-carousel.disabled,.btn-outline-carousel:disabled{color:#d7978c;background-color:transparent}
+
+
+
+.btn-outline-primary{color:#d7978c;border-color:#d7978c}.btn-check:active+.btn-outline-primary,.btn-check:checked+.btn-outline-primary,.btn-outline-primary.active,.btn-outline-primary.dropdown-toggle.show,.btn-outline-primary:active,.btn-outline-primary:hover{color:#d7978c;background-color:#d7978c;border-color:#d7978c}.btn-check:focus+.btn-outline-primary,.btn-outline-primary:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-check:active+.btn-outline-primary:focus,.btn-check:checked+.btn-outline-primary:focus,.btn-outline-primary.active:focus,.btn-outline-primary.dropdown-toggle.show:focus,.btn-outline-primary:active:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#d7978c;background-color:transparent}
+
+
+.bg-secondary{background-color:#d7978c!important}
+
+.btn-primary:hover{color:#fff;background-color:#d7978c;border-color:#d7978c}
+.btn-primary{
+    text-decoration:None;
+    color:#fff;
+    border-color:#d7978c;
+    background-color:#d7978c;
+}
