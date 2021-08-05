@@ -3,6 +3,69 @@ Custom CSS for TemplateMo 561 Purple Buzz
 
 https://templatemo.com/tm-561-purple-buzz*/
 
+
+
+/* line 7, src/assets/scss/_containers.scss */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+  min-height: 100%;
+  margin-bottom:-55px;
+  padding-bottom: 55px;
+  width: 100vw;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  /* line 20, src/assets/scss/_containers.scss */
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 20, src/assets/scss/_containers.scss */
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* line 20, src/assets/scss/_containers.scss */
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 20, src/assets/scss/_containers.scss */
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  /* line 20, src/assets/scss/_containers.scss */
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: 1320px;
+  }
+}
+
+
+
+
+
+
+
+
+
 .carousel-control-prev{top:150px;bottom:150px;}
 .carousel-control-next{top:150px;bottom:150px;}
 
@@ -13,17 +76,16 @@ html,body{
 }
 
 footer{
-  position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height:55px;
 }
 
 .content {
-  box-sizing: border-box;/*為元素指定的任何內邊距和邊框都將在已設定的寬度和高度內進行繪製*/
   min-height: 100%;
-  position:relative;
+  margin-bottom:-55px;
+  padding-bottom: 55px;
 }
 
 
@@ -100,8 +162,30 @@ footer{
 
 .img-fluid-QRcode{width:50%;height:auto}
 
+
+
+
+.img-join{
+  width:60%;
+  height:auto;
+  display: block;
+  margin: 0 auto;
+  vertical-align : middle;
+  
+}
+
+
+.img-donate{
+  width:80%;
+  height:auto;
+  display: block;
+  margin: 0 auto;
+  vertical-align : middle;
+
+}
+
 .img-home{
-    width:75%;
+    width:50vw;
     height:auto;
     display: block;
     margin: 0 auto;
