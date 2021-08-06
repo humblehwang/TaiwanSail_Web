@@ -5,62 +5,6 @@ https://templatemo.com/tm-561-purple-buzz*/
 
 
 
-/* line 7, src/assets/scss/_containers.scss */
-.container,
-.container-fluid,
-.container-sm,
-.container-md,
-.container-lg,
-.container-xl,
-.container-xxl {
-  min-height: 100%;
-  margin-bottom:-55px;
-  padding-bottom: 55px;
-  width: 100vw;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  /* line 20, src/assets/scss/_containers.scss */
-  .container, .container-sm {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  /* line 20, src/assets/scss/_containers.scss */
-  .container, .container-sm, .container-md {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  /* line 20, src/assets/scss/_containers.scss */
-  .container, .container-sm, .container-md, .container-lg {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* line 20, src/assets/scss/_containers.scss */
-  .container, .container-sm, .container-md, .container-lg, .container-xl {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  /* line 20, src/assets/scss/_containers.scss */
-  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: 1320px;
-  }
-}
-
-
-
-
 
 
 
@@ -69,16 +13,21 @@ https://templatemo.com/tm-561-purple-buzz*/
 .carousel-control-prev{top:150px;bottom:150px;}
 .carousel-control-next{top:150px;bottom:150px;}
 
+
+
+.wrapper{
+  margin-bottom : -55px;
+  min-height: 100%;
+}
+
 html,body{
     height: 100%;
     margin: 0;
-    padding: 0;
 }
 
 footer{
-  left: 0;
-  bottom: 0;
-  width: 100vw;
+ /* position: relative;
+  bottom: 0;*/
   height:55px;
 }
 
@@ -88,6 +37,17 @@ footer{
   padding-bottom: 55px;
 }
 
+@media screen and (min-width: 10px) and (max-width: 992px) {
+  .div-right{
+    text-align: center ;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 100000px) {
+  .div-right {
+    float:right ;
+  }
+}
 
 .carousel-control-next-icon{
     background-color:#d7978c;
@@ -156,7 +116,10 @@ footer{
 
 .bx-dropdown{font-size:1.2rem!important}
 
-.bx-fb{font-size:2.00rem!important}
+.bx-fb{
+  font-size:2.00rem!important
+
+}
 
 .bx-donate{font-size:1.9rem!important}
 
@@ -196,7 +159,10 @@ footer{
 .img-about{
     width:80%;
     height:auto;
-
+    display: block;
+    margin: 0 auto;
+    vertical-align : middle;
+    padding-bottom :55px;
 }
 
 .img-logo{
@@ -321,3 +287,5 @@ footer{
     border-color:#d7978c;
     background-color:#d7978c;
 }
+
+.bg-primary{background-color:#d7978c!important}

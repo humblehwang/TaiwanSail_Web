@@ -7,9 +7,7 @@ https://templatemo.com/tm-561-purple-buzz
 ---------------------------------------------
 Table of contents
 ------------------------------------------------
-1. Typography
-2. Main Nav
-3. Home
+1. Typographyf
 4. About
 5. Work
 6. Single Work
@@ -184,7 +182,7 @@ p, a {font-weight: 400;}
 #floatingtextarea {
   height: 150px
 }
-/* Footer */
+/* bg-primary */
 footer a.text-light:hover {
   color: #bfbfbf !important;
   transition-duration: 0.15s;
