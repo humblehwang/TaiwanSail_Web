@@ -123,7 +123,27 @@ footer{
 
 .img-fluid-QRcode{width:50%;height:auto}
 
+@media screen and (min-width: 10px) and (max-width: 518px) {
+  .carousel-img-div {
 
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -300px;
+
+
+
+}
+}
+
+@media screen and (min-width: 993px) and (max-width: 100000px) {
+  .carousel-img-div {
+
+
+}
+}
 
 
 .img-join{
@@ -137,8 +157,7 @@ footer{
 
 
 .img-donate{
-  width:80%;
-  height:auto;
+
   display: block;
   margin: 0 auto;
   vertical-align : middle;
@@ -150,7 +169,7 @@ footer{
   object-fit: cover;
 }
 .img-home{
-    width:50vw;
+    width:65vw;
     height:auto;
     display: block;
     margin: 0 auto;
