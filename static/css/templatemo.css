@@ -55,7 +55,9 @@ p, a {font-weight: 400;}
 
 }
 #index_banner .carousel-item {
-  min-height: 75vh;
+  min-height: 65vh;
+  height: 70vh;
+
 }
 #index_banner .carousel-control-prev i,
 #index_banner .carousel-control-next i {
