@@ -157,8 +157,7 @@ footer{
 
 
 .img-donate-v2{
-  width: 100%;
-  height: auto;
+  width: 100vw;
   display: block;
   margin: 0 auto;
   vertical-align : middle;
