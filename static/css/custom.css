@@ -171,7 +171,7 @@ footer{
 
 
 
-@media screen and (min-height: 10px) and (max-height: 877px) {
+@media screen and (min-height: 10px) and (max-height: 520px) {
   .img-home{
 
     width:55vw;
@@ -185,7 +185,7 @@ footer{
   }
 }
 
-@media screen and (min-height: 877px) and (max-height: 100000px) {
+@media screen and (min-height: 520px) and (max-height: 100000px) {
   .img-home{
     width:65vw;
     height:auto;
