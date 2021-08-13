@@ -17,6 +17,7 @@ https://templatemo.com/tm-561-purple-buzz*/
   .container-home {
     max-width: 540px;
   }
+
 }
 
 @media (min-width: 768px) {
@@ -31,6 +32,12 @@ https://templatemo.com/tm-561-purple-buzz*/
   .container-home{
     max-width: 960px;
   }
+  .w-100{
+    width:70%;
+  }
+  .wrapper-home{
+    min-height: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -38,12 +45,24 @@ https://templatemo.com/tm-561-purple-buzz*/
   .container-home {
     max-width: 1140px;
   }
+  .w-100{
+    width:70%;
+  }
+  .wrapper-home{
+    min-height: 100%;
+  }
 }
 
 @media (min-width: 1400px) {
   /* line 20, src/assets/scss/_containers.scss */
   .container-home{
     max-width: 1320px;
+  }
+  .w-100{
+    width:70%;
+  }
+  .wrapper-home{
+    min-height: 100%;
   }
 }
 
@@ -83,9 +102,7 @@ https://templatemo.com/tm-561-purple-buzz*/
 .carousel-control-next{top:150px;bottom:150px;}
 
 
-.wrapper-home{
-  min-height: 100%;
-}
+
 .wrapper{
   margin-bottom : -55px;
   min-height: 100%;
