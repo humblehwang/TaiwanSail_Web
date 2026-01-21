@@ -1,408 +1,1187 @@
 /*
-Custom CSS for TemplateMo 561 Purple Buzz
-https://templatemo.com/tm-561-purple-buzz*/
+ * Custom CSS for Taiwan Sail Association
+ * Optimized for RWD, Modern Color Scheme, and Clean Code Structure
+ */
 
-/* line 7, src/assets/scss/_containers.scss */
+/* ============================================
+   CRITICAL: Override Bootstrap Purple Color FIRST
+   ============================================ */
+* {
+  --bs-primary: #d7978c !important;
+  --bs-primary-rgb: 215, 151, 140 !important;
+}
+
+:root {
+  /* Override Bootstrap primary color FIRST */
+  --bs-primary: #d7978c !important;
+  --bs-primary-rgb: 215, 151, 140 !important;
+  --bs-primary-bg-subtle: #f5e8e5 !important;
+  --bs-primary-border-subtle: #e8b5ab !important;
+  --bs-primary-text-emphasis: #8b5d52 !important;
+  
+  /* Custom color variables */
+  --primary-color: #d7978c;
+  --primary-dark: #c0857a;
+  --primary-light: #e8b5ab;
+  --secondary-color: #d7978c;
+  --text-dark: #333333;
+  --text-muted: #6c757d;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+/* Force override Bootstrap text-primary FIRST - highest priority */
+.text-primary,
+.text-primary:hover,
+.text-primary:focus,
+.text-primary:active,
+h1.text-primary,
+h2.text-primary,
+h3.text-primary,
+h4.text-primary,
+h5.text-primary,
+h6.text-primary,
+.h1.text-primary,
+.h2.text-primary,
+.h3.text-primary,
+.h4.text-primary,
+.h5.text-primary,
+.h6.text-primary,
+* .text-primary,
+section .text-primary,
+div .text-primary,
+.container .text-primary,
+.row .text-primary,
+section h1.text-primary,
+section h2.text-primary,
+section .h2.text-primary,
+.container h1.text-primary,
+.container h2.text-primary,
+.container .h2.text-primary {
+  color: #d7978c !important;
+}
+
+/* Extra override for any remaining purple */
+[class*="text-primary"],
+[style*="color: #4232c2"],
+[style*="color:#4232c2"],
+[style*="color: #382ba5"],
+[style*="color:#382ba5"] {
+  color: #d7978c !important;
+}
+
+/* Force override ALL Bootstrap primary buttons - highest priority */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle,
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary {
+  color: #ffffff !important;
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle,
+.btn-check:checked + .btn-outline-primary,
+.btn-check:active + .btn-outline-primary {
+  color: #d7978c !important;
+  border-color: #d7978c !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: #ffffff !important;
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+}
+
+/* ============================================
+   Base Styles
+   ============================================ */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   Container Styles
+   ============================================ */
 .container-home {
   width: 90%;
   padding-right: var(--bs-gutter-x, 0.75rem);
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
-
 }
 
 @media (min-width: 576px) {
-  /* line 20, src/assets/scss/_containers.scss */
   .container-home {
     max-width: 540px;
   }
-
 }
 
 @media (min-width: 768px) {
-  /* line 20, src/assets/scss/_containers.scss */
   .container-home {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  /* line 20, src/assets/scss/_containers.scss */
-  .container-home{
+  .container-home {
     max-width: 960px;
   }
-  .w-100{
-    width:100%;
+  .w-100 {
+    width: 100%;
   }
-  .wrapper-home{
+  .wrapper-home {
     min-height: 100%;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 20, src/assets/scss/_containers.scss */
   .container-home {
     max-width: 1140px;
   }
-  .w-100{
-    width:70%;
+  .w-100 {
+    width: 100%;
   }
-  .wrapper-home{
+  .wrapper-home {
     min-height: 100%;
   }
 }
 
 @media (min-width: 1400px) {
-  /* line 20, src/assets/scss/_containers.scss */
-  .container-home{
+  .container-home {
     max-width: 1320px;
   }
-  .w-100{
-    width:70%;
+  .w-100 {
+    width: 100%;
   }
-  .wrapper-home{
+  .wrapper-home {
     min-height: 100%;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.carousel-control-prev{top:150px;bottom:150px;}
-.carousel-control-next{top:150px;bottom:150px;}
-
-
-
-.wrapper{
-  margin-bottom : -55px;
+/* ============================================
+   Wrapper & Layout
+   ============================================ */
+.wrapper {
+  margin-bottom: -55px;
   min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-html,body{
-    height: 100%;
-    margin: 0;
-}
-
-footer{
- /* position: relative;
-  bottom: 0;*/
-  height:55px;
+.wrapper-home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
   min-height: 100%;
-  margin-bottom:-55px;
+  margin-bottom: -55px;
   padding-bottom: 55px;
+  flex: 1;
 }
 
-@media screen and (min-width: 10px) and (max-width: 992px) {
-  .div-right{
-    text-align: center ;
+/* ============================================
+   Footer Styles
+   ============================================ */
+footer {
+  height: auto;
+  min-height: 55px;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 1rem 0;
   }
 }
 
-@media screen and (min-width: 993px) and (max-width: 100000px) {
-  .div-right {
-    float:right ;
-  }
+/* ============================================
+   Navigation Styles
+   ============================================ */
+.navbar {
+  transition: var(--transition);
 }
 
-.carousel-control-next-icon{
-    background-color:#d7978c;
-}
-.carousel-control-prev-icon{
-    background-color:#d7978c;
-}
-.carousel-control-prev{
-    background-color:transparent;
-    border-color:transparent;
-}
-.carousel-control-next{
-    background-color:transparent;
-    border-color:transparent;
+.navbar-brand img {
+  transition: var(--transition);
 }
 
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  transition: var(--transition);
+  position: relative;
+  color: #333333 !important;
+}
+
+.nav-link:hover {
+  color: #d7978c !important;
+  transform: translateY(-2px);
+}
+
+/* Ensure all nav links with btn-outline-primary use consistent color - HIGHEST PRIORITY */
+a.nav-link.btn-outline-primary,
+.navbar-nav .nav-link.btn-outline-primary,
+.nav-item .nav-link.btn-outline-primary {
+  color: #d7978c !important;
+  border-color: #d7978c !important;
+  background-color: transparent !important;
+}
+
+a.nav-link.btn-outline-primary:hover,
+.navbar-nav .nav-link.btn-outline-primary:hover,
+.nav-item .nav-link.btn-outline-primary:hover {
+  color: #ffffff !important;
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+}
+
+a.nav-link.btn-outline-primary:focus,
+a.nav-link.btn-outline-primary:active,
+.navbar-nav .nav-link.btn-outline-primary:focus,
+.navbar-nav .nav-link.btn-outline-primary:active {
+  color: #ffffff !important;
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+  box-shadow: 0 0 0 0.25rem rgba(215, 151, 140, 0.25) !important;
+}
+
+/* ============================================
+   Dropdown Menu
+   ============================================ */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f8f8f8;
-  min-width: 160px;
-  overflow: auto;
-  z-index: 1;
+  background-color: var(--bg-white);
+  min-width: 200px;
+  box-shadow: var(--shadow-md);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  z-index: 1000;
+  margin-top: 0.5rem;
+  animation: fadeIn 0.3s ease;
 }
 
-.dropdown a:hover {background-color: #d7978c;}
-
-.show {display: block;}
-
-
-
-
-
-.btn-download{
-    color:#d7978c;
-    background-color:#d7978c;
-    border-color:#d7978c;
-    color:#fff;
-
-}
-
-.icon-report{
-    font-weight:300;
-    line-height:1.2;
-    color:#d7978c;
-    font-size: 50px;
-}
-
-
-.icon-contact{
-    font-weight:300;
-    line-height:1.2;
-    color:#d7978c;
-    font-size: 25px;
-}
-
-
-.icon-contact-bg{
-    font-weight:300;
-    line-height:1.2;
-    color:#d7978c;
-    font-size: 65px;
-}
-
-.bx-contact{font-size:1.2rem!important}
-
-.bx-dropdown{font-size:1.2rem!important}
-
-.bx-fb{
-  font-size:2.00rem!important
-
-}
-
-.bx-donate{font-size:1.9rem!important}
-
-.img-fluid-QRcode{width:50%;height:auto}
-
-@media screen and (min-width: 10px) and (max-width: 518px) {
-  .carousel-img-div {
-
-    width: 600px;
-    height: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -150px 0 0 -300px;
-
-
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media screen and (min-width: 993px) and (max-width: 100000px) {
-  .carousel-img-div {
-
-
-  }
-}
-
-
-.img-join{
-  width:60%;
-  height:auto;
+.dropdown-content a {
   display: block;
-  margin: 0 auto;
-  vertical-align : middle;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  transition: var(--transition);
+  border-radius: 0;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+.dropdown.show .dropdown-content {
+  display: block;
+}
+
+/* ============================================
+   Carousel Styles
+   ============================================ */
+.carousel {
+  position: relative;
+}
+
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transform: none;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  opacity: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(215, 151, 140, 0.85);
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background-color: var(--primary-color);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.carousel-indicators {
+  margin-bottom: 1rem;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(215, 151, 140, 0.5);
+  border: 2px solid var(--bg-white);
+  transition: var(--transition);
+}
+
+.carousel-indicators button.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
   
+  .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+  }
 }
 
+/* ============================================
+   Button Styles
+   ============================================ */
+.btn-primary {
+  text-decoration: none;
+  color: var(--bg-white) !important;
+  border-color: #d7978c !important;
+  background-color: #d7978c !important;
+  transition: var(--transition);
+  border-radius: 50rem;
+  padding: 0.5rem 1.5rem;
+}
 
-.img-donate-v2{
-  width: 100vw;
+.btn-primary:hover {
+  color: var(--bg-white) !important;
+  background-color: var(--primary-dark) !important;
+  border-color: var(--primary-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Disable hover for donation page buttons (捐款支持, 物資供應) */
+.donate-page .btn-primary,
+.donate-page .btn-primary:hover,
+.donate-page .btn-primary:focus,
+.donate-page .btn-primary:active {
+  transform: none !important;
+  box-shadow: none !important;
+  cursor: default !important;
+}
+
+/* More specific: disable hover and change color for span elements with btn-primary */
+span.btn-primary,
+span.btn-primary:hover,
+span.btn-primary:focus,
+span.btn-primary:active {
+  transform: none !important;
+  box-shadow: none !important;
+  cursor: default !important;
+  pointer-events: none;
+  /* Change to darker color for better visibility - use dark brown/red */
+  background-color: #8b5d52 !important;
+  border-color: #8b5d52 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.btn-outline-primary {
+  color: #d7978c !important;
+  border-color: #d7978c !important;
+  background-color: transparent !important;
+  transition: var(--transition);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle,
+.btn-check:checked + .btn-outline-primary,
+.btn-check:active + .btn-outline-primary {
+  color: #ffffff !important;
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+  box-shadow: 0 0 0 0.25rem rgba(215, 151, 140, 0.25) !important;
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(215, 151, 140, 0.3) !important;
+}
+
+.btn-outline-about {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: #d7978c !important;
+  transition: var(--transition);
+}
+
+.btn-outline-about:hover {
+  color: #d7978c !important;
+  background-color: rgba(215, 151, 140, 0.1) !important;
+  border-color: transparent !important;
+}
+
+.btn-download {
+  color: var(--bg-white);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.btn-download:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   Image Styles
+   ============================================ */
+.img-logo {
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+  transition: var(--transition);
+}
+
+@media (max-width: 768px) {
+  .img-logo {
+    width: 150px;
+  }
+}
+
+.img-home {
   display: block;
   margin: 0 auto;
-  vertical-align : middle;
-
-}
-/*
-.card-img-top{
-  width: 100%;
-  height: 30vh;
+  vertical-align: middle;
+  border-radius: 0.5rem;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
-}*/
+  width: 100%;
+}
 
+/* Carousel Image Container */
+.carousel-inner {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-.img-home{
+.carousel-item {
+  position: relative;
+}
 
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .carousel-item img {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item img {
+    min-height: 250px;
+  }
+}
+
+.carousel-item a {
+  display: block;
+  transition: var(--transition);
+}
+
+.carousel-item a:hover {
+  opacity: 0.95;
+}
+
+.img-about {
+  width: 80%;
+  height: auto;
   display: block;
   margin: 0 auto;
-  vertical-align : middle;
+  vertical-align: middle;
+  padding-bottom: 55px;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
 }
 
-.img-about{
-    width:80%;
-    height:auto;
-    display: block;
-    margin: 0 auto;
-    vertical-align : middle;
-    padding-bottom :55px;
+@media (max-width: 768px) {
+  .img-about {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
 }
 
-.img-logo{
-    width:200px;
-    height:auto;
+.img-join {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  vertical-align: middle;
+  transition: var(--transition);
 }
+
+.img-join:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .img-join {
+    width: 80%;
+  }
+}
+
+.img-fluid {
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+/* Override typo-space-line decoration color */
+.typo-space-line::after,
+.typo-space-line-center::after,
+.text-primary.typo-space-line::after,
+h1.typo-space-line::after,
+h2.typo-space-line::after,
+.h2.typo-space-line::after,
+h1.text-primary.typo-space-line::after,
+h2.text-primary.typo-space-line::after,
+.h2.text-primary.typo-space-line::after {
+  border-bottom-color: #d7978c !important;
+}
+
+/* Override Bootstrap text-primary - HIGHEST PRIORITY */
+.text-primary,
+.text-primary:hover,
+.text-primary:focus,
+.text-primary:active,
+h1.text-primary,
+h2.text-primary,
+h3.text-primary,
+h4.text-primary,
+h5.text-primary,
+h6.text-primary,
+.h2.text-primary,
+.h1.text-primary,
+* .text-primary,
+section .text-primary,
+div .text-primary,
+.container .text-primary {
+  color: #d7978c !important;
+}
+
+.light-300 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 300;
+}
+
 .light-donate {
   font-family: 'Open Sans', sans-serif !important;
   font-weight: 300;
-  font-size: 20px;
-}
-
-.light-donate-QRcode {
-  font-family: 'Open Sans', sans-serif !important;
-  font-weight: 300;
-  font-size: 25px;
+  font-size: 1.125rem;
+  line-height: 1.6;
 }
 
 .light-donate-note {
   font-family: 'Open Sans', sans-serif !important;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .light-about {
   font-family: 'Open Sans', sans-serif !important;
   font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .light-about {
+    font-size: 1rem;
+  }
+  .light-donate {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   Icon Styles
+   ============================================ */
+.icon-report {
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--primary-color);
+  font-size: 50px;
+  transition: var(--transition);
+}
+
+.icon-report:hover {
+  color: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .icon-report {
+    font-size: 35px;
+  }
+}
+
+.icon-contact {
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--primary-color);
   font-size: 25px;
 }
-.light-home{
-  font-family: 'Open Sans', sans-serif !important;
-  font-weight: 300;
-  font-size:20px;
 
+.bx-contact {
+  font-size: 1.2rem !important;
 }
-.typo-space-line-home::after {
-  content: "";
-  width: 400px;
-  display:block;
+
+.bx-fb {
+  font-size: 2rem !important;
+  transition: var(--transition);
+  margin: 0 0.5rem;
+}
+
+.bx-fb:hover {
+  color: var(--bg-white) !important;
+  opacity: 0.8;
+  transform: scale(1.15);
+}
+
+@media (max-width: 768px) {
+  .bx-fb {
+    font-size: 1.5rem !important;
+    margin: 0 0.25rem;
+  }
+}
+
+/* ============================================
+   Background Colors
+   ============================================ */
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--primary-color) !important;
+}
+
+/* Override Bootstrap primary color completely - Force #d7978c */
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle,
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary {
+  color: var(--bg-white) !important;
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+}
+
+.btn-outline-primary,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle,
+.btn-check:checked + .btn-outline-primary,
+.btn-check:active + .btn-outline-primary {
+  color: #d7978c !important;
+  border-color: #d7978c !important;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle,
+.btn-check:checked + .btn-outline-primary,
+.btn-check:active + .btn-outline-primary {
+  color: var(--bg-white) !important;
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+}
+
+/* Remove any purple colors from Bootstrap */
+[class*="btn-primary"],
+[class*="btn-outline-primary"] {
+  --bs-btn-color: #ffffff !important;
+  --bs-btn-bg: #d7978c !important;
+  --bs-btn-border-color: #d7978c !important;
+  --bs-btn-hover-color: #ffffff !important;
+  --bs-btn-hover-bg: #c0857a !important;
+  --bs-btn-hover-border-color: #c0857a !important;
+  --bs-btn-active-color: #ffffff !important;
+  --bs-btn-active-bg: #c0857a !important;
+  --bs-btn-active-border-color: #c0857a !important;
+}
+
+/* ============================================
+   Footer Responsive Styles
+   ============================================ */
+@media screen and (max-width: 992px) {
+  .div-right {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .div-right {
+    float: right;
+  }
+}
+
+/* ============================================
+   Card Styles
+   ============================================ */
+.card {
+  transition: var(--transition);
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(215, 151, 140, 0.2);
+  transform: translateY(-5px);
+}
+
+.service-work {
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.service-work img {
+  transition: var(--transition);
+}
+
+.service-work:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   Contact Section
+   ============================================ */
+.contact {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-light);
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.contact:hover {
+  box-shadow: 0 4px 15px rgba(215, 151, 140, 0.15);
+  transform: translateX(5px);
+  border-left: 3px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem;
+  }
+}
+
+/* ============================================
+   Pricing List (Report Page)
+   ============================================ */
+.pricing-list {
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.pricing-list:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(215, 151, 140, 0.15);
+  border-left: 3px solid var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .pricing-list {
+    margin-bottom: 1.5rem;
+  }
+  .pricing-list-icon,
+  .pricing-list-body,
+  .pricing-list-footer {
+    padding: 0.5rem;
+  }
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.rounded-about {
+  border-radius: 50rem !important;
+}
+
+/* ============================================
+   Responsive Typography
+   ============================================ */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ============================================
+   Accessibility Improvements
+   ============================================ */
+a:focus,
+button:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.skip-link {
   position: absolute;
-  border-bottom:  5px solid #DDDDDD;
-  padding-top: .5em;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: var(--bg-white);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
 }
 
-.typo-space-line-afterclass::after,
-.typo-space-line-afterclass::after {
-  content: "";
-  width: 200px;
-  display:block;
+.skip-link:focus {
+  top: 0;
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+  .navbar,
+  footer,
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+/* ============================================
+   FINAL OVERRIDE - Remove ALL purple colors - ABSOLUTE LAST
+   ============================================ */
+/* Force remove any remaining purple (#4232c2, #382ba5, #35289b) */
+[style*="#4232c2"],
+[style*="#382ba5"],
+[style*="#35289b"],
+[style*="4232c2"],
+[style*="382ba5"],
+[style*="35289b"],
+*[class*="text-primary"][style*="color"],
+*[class*="btn-primary"][style*="background"],
+*[class*="btn-primary"][style*="border"] {
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+  color: #d7978c !important;
+}
+
+/* Ultimate override - target any element with purple color */
+* {
+  --bs-primary: #d7978c !important;
+}
+
+/* ABSOLUTE FINAL OVERRIDE - Must be at the very end */
+h1.text-primary,
+h1.h2.text-primary,
+.h2.text-primary,
+h2.text-primary,
+.container h1.text-primary,
+.container h1.h2.text-primary,
+.container .h2.text-primary,
+section h1.text-primary,
+section h1.h2.text-primary,
+section .h2.text-primary,
+main h1.text-primary,
+main h1.h2.text-primary,
+main .h2.text-primary {
+  color: #d7978c !important;
+}
+
+/* Final override for buttons */
+span.btn-primary,
+h3 span.btn-primary,
+.container span.btn-primary {
+  background-color: #8b5d52 !important;
+  border-color: #8b5d52 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* Final override for any Bootstrap primary that might slip through */
+.btn-primary[class*="primary"],
+.btn-outline-primary[class*="primary"],
+.nav-link[class*="primary"] {
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+  color: #d7978c !important;
+}
+
+.btn-primary[class*="primary"]:hover,
+.btn-outline-primary[class*="primary"]:hover,
+.nav-link[class*="primary"]:hover {
+  background-color: #d7978c !important;
+  border-color: #d7978c !important;
+  color: #ffffff !important;
+}
+
+/* ============================================
+   ABSOLUTE FINAL OVERRIDE - MUST BE LAST
+   ============================================ */
+/* Override h1.h2.text-primary specifically */
+h1.h2.text-primary,
+h1.text-primary.h2,
+.container h1.h2.text-primary,
+.container h1.text-primary.h2,
+section h1.h2.text-primary,
+section h1.text-primary.h2,
+main h1.h2.text-primary,
+main h1.text-primary.h2 {
+  color: #d7978c !important;
+}
+
+/* Override span.btn-primary for donation page */
+span.btn-primary,
+h3 span.btn-primary,
+.container h3 span.btn-primary,
+.row h3 span.btn-primary {
+  background-color: #8b5d52 !important;
+  border-color: #8b5d52 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+}
+
+/* ============================================
+   Recruitment Poster Style (工讀生/志工招募海報)
+   ============================================ */
+.recruitment-slide {
+  display: block;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+  min-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.recruitment-poster {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: #ffffff;
+}
+
+.recruitment-top-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.recruitment-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4rem;
+  color: #d7978c;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.recruitment-bottom-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  color: #d7978c;
+  margin-top: 2rem;
+  font-weight: 500;
+  position: relative;
+  padding-right: 1rem;
+}
+
+/* Watercolor decoration */
+.watercolor-decoration {
   position: absolute;
-  border-bottom:  5px solid #DDDDDD;
-  padding-top: .5em;
+  left: 0;
+  right: 0;
+  height: 80px;
+  opacity: 0.3;
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    rgba(215, 151, 140, 0.1) 0%,
+    rgba(200, 133, 122, 0.15) 20%,
+    rgba(139, 93, 82, 0.1) 40%,
+    rgba(200, 133, 122, 0.15) 60%,
+    rgba(215, 151, 140, 0.1) 80%,
+    rgba(200, 133, 122, 0.15) 100%
+  );
+  border-radius: 50% 50% 0 0;
 }
 
-.typo-space-line-camp::after {
-  content: "";
-  width: 450px;
-  display:block;
+.watercolor-decoration.top-decoration {
+  top: 0;
+  transform: rotate(180deg);
+  background: linear-gradient(
+    to right,
+    rgba(139, 93, 82, 0.08) 0%,
+    rgba(200, 133, 122, 0.12) 15%,
+    rgba(215, 151, 140, 0.1) 30%,
+    rgba(200, 133, 122, 0.12) 50%,
+    rgba(139, 93, 82, 0.08) 70%,
+    rgba(200, 133, 122, 0.12) 85%,
+    rgba(215, 151, 140, 0.1) 100%
+  );
+}
+
+.watercolor-decoration.bottom-decoration {
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(139, 93, 82, 0.08) 0%,
+    rgba(200, 133, 122, 0.12) 15%,
+    rgba(215, 151, 140, 0.1) 30%,
+    rgba(200, 133, 122, 0.12) 50%,
+    rgba(139, 93, 82, 0.08) 70%,
+    rgba(200, 133, 122, 0.12) 85%,
+    rgba(215, 151, 140, 0.1) 100%
+  );
+}
+
+/* Add some decorative elements */
+.recruitment-poster::before,
+.recruitment-poster::after {
+  content: '';
   position: absolute;
-  border-bottom:  5px solid #DDDDDD;
-  padding-top: .5em;
-  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.1;
+  background: radial-gradient(circle, rgba(215, 151, 140, 0.3) 0%, transparent 70%);
 }
 
-
-
-.typo-space-line-donate::after {
-  content: "";
-  width: 800px;
-  display:block;
-  position: absolute;
-  border-bottom:  5px solid #DDDDDD;
-  padding-top: .5em;
-  margin: auto;
-}
-.typo-space-line-center-donate::after {
-  left: 50%;
-  margin-left: -75px;
-
+.recruitment-poster::before {
+  top: 20px;
+  left: 10%;
 }
 
-
-
-.typo-space-line::after,
-.typo-space-line-center::after {
-  content: "";
-  width: 250px;
-  display:block;
-  position: absolute;
-  border-bottom:  5px solid #DDDDDD;
-  padding-top: .5em;
-}
-.typo-space-line-center::after {
-  left: 50%;
-  margin-left: -75px;
+.recruitment-poster::after {
+  bottom: 20px;
+  right: 10%;
 }
 
-
-.text-primary{color:#d7978c!important}
-
-
-
-.rounded-about{border-radius:50rem!important}
-.btn-outline-about{background-color:transparent;border-color:transparent}
-.btn-outline-about:hover{color:#d7978c;background-color:#d7978c;border-color:transparent}
-.btn-outline-about:active {
-  border-color:transparent;background-color: transparent;
+@media (max-width: 768px) {
+  .recruitment-title {
+    font-size: 2.5rem;
+  }
+  
+  .recruitment-top-text {
+    font-size: 1.2rem;
+  }
+  
+  .recruitment-bottom-text {
+    font-size: 1.5rem;
+  }
+  
+  .recruitment-poster {
+    padding: 2rem 1rem;
+    min-height: 300px;
+  }
+  
+  .watercolor-decoration {
+    height: 60px;
+  }
 }
-.btn-outline-about:check {
-  border-color:#d7978c;background-color: #d7978c;
-}
-
-
-.btn-outline-carousel{color:#d7978c;border-color:#d7978c}.btn-check:active+.btn-outline-carousel,.btn-check:checked+.btn-outline-carousel,.btn-outline-carousel.active,.btn-outline-carousel.dropdown-toggle.show,.btn-outline-carousel:active,.btn-outline-carousel:hover{color:white;background-color:#d7978c;border-color:#d7978c;}.btn-check:focus+.btn-outline-carousel,.btn-outline-carousel:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-check:active+.btn-outline-carousel:focus,.btn-check:checked+.btn-outline-carousel:focus,.btn-outline-carousel.active:focus,.btn-outline-carousel.dropdown-toggle.show:focus,.btn-outline-carousel:active:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-outline-carousel.disabled,.btn-outline-carousel:disabled{color:#d7978c;background-color:transparent}
-
-
-
-.btn-outline-primary{color:#d7978c;border-color:#d7978c}.btn-check:active+.btn-outline-primary,.btn-check:checked+.btn-outline-primary,.btn-outline-primary.active,.btn-outline-primary.dropdown-toggle.show,.btn-outline-primary:active,.btn-outline-primary:hover{color:#d7978c;background-color:#d7978c;border-color:#d7978c}.btn-check:focus+.btn-outline-primary,.btn-outline-primary:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-check:active+.btn-outline-primary:focus,.btn-check:checked+.btn-outline-primary:focus,.btn-outline-primary.active:focus,.btn-outline-primary.dropdown-toggle.show:focus,.btn-outline-primary:active:focus{-webkit-box-shadow:0 0 0 .25rem rgba(236,203,198,.5);box-shadow:0 0 0 .25rem rgba(236,203,198,.5)}.btn-outline-primary.disabled,.btn-outline-primary:disabled{color:#d7978c;background-color:transparent}
-
-
-.bg-secondary{background-color:#d7978c!important}
-
-.btn-primary:hover{color:#fff;background-color:#d7978c;border-color:#d7978c}
-.btn-primary{
-    text-decoration:None;
-    color:#fff;
-    border-color:#d7978c;
-    background-color:#d7978c;
-}
-
-.bg-primary{background-color:#d7978c!important}

@@ -1,69 +1,61 @@
 <!DOCTYPE html>
-
-<html lang="en">
-       
-
-  
+<html lang="zh-TW">
 <head>
-    <title>台灣揚帆協會 加入我們</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="/static/img/logo.JPG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="台灣揚帆協會招募 - 歡迎您成為孩子們的祝福，目前正在招募工讀生及志工">
+    <meta name="keywords" content="台灣揚帆協會, 加入我們, 工讀生, 志工, 招募">
+    <title>台灣揚帆協會 - 加入我們</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="static/img/logo.JPG">
     <link rel="shortcut icon" type="image/x-icon" href="static/img/logo.JPG">
-    <!-- Load Require CSS -->
-    <link href="static/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font CSS -->
     <link href="static/css/boxicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Load Tempalte CSS -->
     <link rel="stylesheet" href="static/css/templatemo.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="static/css/custom.css">
-    <!-- icon -->
-    <script src="https://kit.fontawesome.com/a58d97a913.js" crossorigin="anonymous"></script>    
-<!--
     
-TemplateMo 561 Purple Buzz
-
-https://templatemo.com/tm-561-purple-buzz
-
--->
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a58d97a913.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class='wrapper'>        
-    <!-- Header -->
-    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow ">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand h1" href="index.html">
-                <img class="img-logo" src="static/img/twsail-logo.png">
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow" role="navigation" aria-label="主要導航">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="台灣揚帆協會首頁">
+                    <img class="img-logo" src="static/img/twsail-logo.png" alt="台灣揚帆協會 Logo">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="切換導航選單">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
-                <div class="flex-fill mx-xl-5 mb-2">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                <div class="collapse navbar-collapse" id="navbar-toggler-success">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-wrap justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">首頁</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn-outline-about rounded-about px-3 dropbtn" 
+                               href="#" id="aboutDropdownToggle" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false"
+                               onclick="aboutFunction(); return false;">認識我們</a>
+                            <ul id="aboutDropdown" class="dropdown-content dropdown-menu" aria-labelledby="aboutDropdownToggle">
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="about.html">協會簡介</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="afterclass.html">課後照顧</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="eduaction.html">校園生命品格教育</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="camp.html">寒暑假營會</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="teacher.html">師資訓練</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <div class="dropdown">
-                                  <a  onclick="aboutFunction()" class="nav-link btn-outline-about rounded-about px-3  dropbtn">認識我們</a>
-                                  <div id="aboutDropdown" class="dropdown-content">
-
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">協會簡介</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="afterclass.html">課後照顧</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="eduaction.html">校園生命品格教育</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="camp.html">寒暑假營會</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="teacher.html">師資訓練</a>
-                                  </div>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="join.html">加入我們</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3 active" href="join.html">加入我們</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="donate.html">資助我們</a>
@@ -74,168 +66,122 @@ https://templatemo.com/tm-561-purple-buzz
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="report.html">財務報表</a>
                         </li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                     </ul>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-
-    <!-- Start Feature Work -->
-    <section class=" py-5 ">
-            <h1 class="text-center text-primary pt-3">歡迎您成為孩子們的祝福</h1>
-            <h4 class="text-center  pt-3">    
-                目前正在招募工讀生及志工
-            </h4>
-                
-                
-         <!-- Start Aim -->
-            <div class="container my-4">
-                <div class="row text-center">
-
-                    <div class="objective col-lg-6">
-                        <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
-                            <a href="https://forms.gle/yAhYZeWQktp5Qfny8"><img class="img-join"  src="static/img/part_time_icon.png"></a>
-                        </div>
-                        <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">工讀生</h2>
-                        <p class="feature-work-body align-items-center text-muted light-donate">                            
-                            本協會是半服務性質的工作團隊，服務對象大多為國中、國小的學生，工作內容有協助學生課後輔導、才藝班、校園生命品格教育、餐廳….等<br>
-                        </p>
-
-                    </div>
-
-                    <div class="objective col-lg-6 mt-sm-0 mt-4">
-                        <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
-                            <a href="/contact.html"><img class="img-join"  src="static/img/volunteer_icon.png"></a>
-                        </div>
-                        <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300 " >志工</h2>
-                        <p class="feature-work-body align-items-center text-muted light-donate">
-                            歡迎您加入我們志工的行列，我們在花蓮、台東、台南、苗栗皆有招募
-                        </p>
-                    </div>
-
-
-
-                </div>
-        <!-- End Aim -->               
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-        </div>
-    </section>
-    <!-- End Feature Work -->
-    
-
-    
-    
-</div> 
-   <!-- Start Footer -->
-   <footer class="bg-secondary pt-1 ">
-    <div class="w-100 bg-primary py-3">
-        <div class="container">
-                <div class="row pt-2">
-
-                    <div class="col-lg-2 col-sm-12 col-md-12">
-                        <p class=" text-light  light-300 div-right" >
-                            <a class="text-light" target="_blank" href="/donate.html"> <i class="fas fa-donate  bx-fb"></i></a>
-                            <a class="text-light" target="_blank" href="https://www.facebook.com/sail3405"><i class="fab fa-facebook bx-fb"></i></a>
-                            <a class="text-light" target="_blank" href="contact.html"><i class="fab fa-line  bx-fb"></i></a>
-                        </p>
-                    </div>                   
+        <!-- Main Content -->
+        <main class="content">
+            <section class="py-5" aria-label="加入我們">
+                <div class="container">
+                    <h1 class="text-center text-primary pt-3 mb-3">歡迎您成為孩子們的祝福</h1>
+                    <h4 class="text-center pt-3 mb-5">目前正在招募工讀生及志工</h4>
                     
-                    <div class="col-lg-3 col-md-12 col-sm-12">
-                        <p class="text-center text-light light-300">
-                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:sail3405@gamil.com">sail3405@gamil.com</a>
-                        </p>
-                    </div>                         
-        
-                    <div class="col-lg-2 col-sm-12 col-md-12">
-                        <p class="text-light text-center text-light light-300">
-                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:03-8663405">03-8663405</a>
-                        </p>
-                    </div>      
-                    <div class="col-lg-5 col-md-12 col-sm-12">
-                        <p class="text-center text-light light-300">
-                            <i class='bx-fw bx bx-home bx-xs'></i><a class="text-decoration-none text-light py-1">地址：974花蓮縣壽豐鄉中山路三段106號</a>                        
-                        </p>
-                    </div>   
+                    <div class="container my-4">
+                        <div class="row text-center g-4">
+                            <div class="objective col-lg-6">
+                                <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                                    <a href="https://forms.gle/yAhYZeWQktp5Qfny8" target="_blank" rel="noopener noreferrer" aria-label="工讀生申請表單">
+                                        <img class="img-join" src="static/img/part_time_icon.png" alt="工讀生">
+                                    </a>
+                                </div>
+                                <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">工讀生</h2>
+                                <p class="feature-work-body align-items-center text-muted light-donate">
+                                    本協會是半服務性質的工作團隊，服務對象大多為國中、國小的學生，工作內容有協助學生課後輔導、才藝班、校園生命品格教育、餐廳….等
+                                </p>
+                            </div>
+
+                            <div class="objective col-lg-6 mt-sm-0 mt-4">
+                                <div class="objective-icon card m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg">
+                                    <a href="contact.html" aria-label="志工申請">
+                                        <img class="img-join" src="static/img/volunteer_icon.png" alt="志工">
+                                    </a>
+                                </div>
+                                <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300">志工</h2>
+                                <p class="feature-work-body align-items-center text-muted light-donate">
+                                    歡迎您加入我們志工的行列，我們在花蓮、台東、台南、苗栗皆有招募
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="row pt-2">
-                        <p class=" text-center text-light light-300">
-                            ©Copyright 2021 台灣揚帆協會. All Rights Reserved.
-                        </p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-secondary pt-1 mt-auto" role="contentinfo">
+            <div class="w-100 bg-primary py-3">
+                <div class="container">
+                    <div class="row pt-2 align-items-center">
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-light light-300 div-right mb-0">
+                                <a class="text-light" href="donate.html" target="_blank" rel="noopener noreferrer" aria-label="捐款">
+                                    <i class="fas fa-donate bx-fb" aria-hidden="true"></i>
+                                </a>
+                                <a class="text-light" href="https://www.facebook.com/sail3405" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="fab fa-facebook bx-fb" aria-hidden="true"></i>
+                                </a>
+                                <a class="text-light" href="contact.html" aria-label="聯絡我們">
+                                    <i class="fab fa-line bx-fb" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-mail-send bx-xs" aria-hidden="true"></i>
+                                <a class="text-decoration-none text-light py-1" href="mailto:sail3405@gamil.com">sail3405@gamil.com</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-phone bx-xs" aria-hidden="true"></i>
+                                <a class="text-decoration-none text-light py-1" href="tel:03-8663405">03-8663405</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-home bx-xs" aria-hidden="true"></i>
+                                地址：974花蓮縣壽豐鄉中山路三段106號
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-12">
+                            <p class="text-center text-light light-300 mb-0">
+                                ©Copyright 2021 台灣揚帆協會. All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </footer>
     </div>
-</footer>
-<!-- End Footer -->
 
-    <!-- Bootstrap -->
+    <!-- Scripts -->
     <script src="static/js/bootstrap.bundle.min.js"></script>
-    <!-- Load jQuery require for isotope -->
     <script src="static/js/jquery.min.js"></script>
-    <!-- Isotope -->
     <script src="static/js/isotope.pkgd.js"></script>
-    <!-- Page Script -->
-    <script>
-        
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function aboutFunction() {
-      document.getElementById("aboutDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }  
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-  
-    </script>
-    <!-- Templatemo -->
     <script src="static/js/templatemo.js"></script>
-    <!-- Custom -->
     <script src="static/js/custom.js"></script>
+    
+    <script>
+        function aboutFunction() {
+            const dropdown = document.getElementById("aboutDropdown");
+            dropdown.classList.toggle("show");
+        }
 
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
-
 </html>

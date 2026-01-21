@@ -1,66 +1,58 @@
 <!DOCTYPE html>
-
-<html lang="en">
-       
-
-  
+<html lang="zh-TW">
 <head>
-    <title>台灣揚帆協會 財務報表</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="/static/img/logo.JPG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="台灣揚帆協會財務報表 - 年度財務報表、捐款明細以及資產負債表">
+    <meta name="keywords" content="台灣揚帆協會, 財務報表, 捐款明細, 資產負債表, 損益表">
+    <title>台灣揚帆協會 - 財務報表</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="static/img/logo.JPG">
     <link rel="shortcut icon" type="image/x-icon" href="static/img/logo.JPG">
-    <!-- Load Require CSS -->
-    <link href="static/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font CSS -->
     <link href="static/css/boxicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Load Tempalte CSS -->
     <link rel="stylesheet" href="static/css/templatemo.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="static/css/custom.css">
-    <!-- icon -->
-    <script src="https://kit.fontawesome.com/a58d97a913.js" crossorigin="anonymous"></script>    
-<!--
     
-TemplateMo 561 Purple Buzz
-
-https://templatemo.com/tm-561-purple-buzz
-
--->
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a58d97a913.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
- <div class='wrapper'>       
-    <!-- Header -->
-    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow ">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand h1" href="index.html">
-                <img class="img-logo" src="static/img/twsail-logo.png">
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow" role="navigation" aria-label="主要導航">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="台灣揚帆協會首頁">
+                    <img class="img-logo" src="static/img/twsail-logo.png" alt="台灣揚帆協會 Logo">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="切換導航選單">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
-                <div class="flex-fill mx-xl-5 mb-2">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                <div class="collapse navbar-collapse" id="navbar-toggler-success">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-wrap justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">首頁</a>
                         </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                  <a  onclick="aboutFunction()" class="nav-link btn-outline-about rounded-about px-3  dropbtn">認識我們</a>
-                                  <div id="aboutDropdown" class="dropdown-content">
-
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">協會簡介</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="afterclass.html">課後照顧</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="eduaction.html">校園生命品格教育</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="camp.html">寒暑假營會</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="teacher.html">師資訓練</a>
-                                  </div>
-                            </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn-outline-about rounded-about px-3 dropbtn" 
+                               href="#" id="aboutDropdownToggle" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false"
+                               onclick="aboutFunction(); return false;">認識我們</a>
+                            <ul id="aboutDropdown" class="dropdown-content dropdown-menu" aria-labelledby="aboutDropdownToggle">
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="about.html">協會簡介</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="afterclass.html">課後照顧</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="eduaction.html">校園生命品格教育</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="camp.html">寒暑假營會</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="teacher.html">師資訓練</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="join.html">加入我們</a>
@@ -72,184 +64,154 @@ https://templatemo.com/tm-561-purple-buzz
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="contact.html">聯絡我們</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="report.html">財務報表</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3 active" href="report.html">財務報表</a>
                         </li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                     </ul>
                 </div>
             </div>
-        </div>
-    </nav>
-   <section class="container content py-5">
+        </nav>
 
-        <h1 class="text-center text-primary pt-3">財務報表</h1>
-        <p class="text-center pb-5 light-300">
-            感謝您們對我們的幫助，以下是我們年度的財務報表、捐款明細以及資產負債表，敬請參閱。
-        </p>
+        <!-- Main Content -->
+        <main class="content">
+            <section class="container py-5" aria-label="財務報表">
+                <h1 class="text-center text-primary pt-3 mb-3">財務報表</h1>
+                <p class="text-center pb-5 light-300">
+                    感謝您們對我們的幫助，以下是我們年度的財務報表、捐款明細以及資產負債表，敬請參閱。
+                </p>
 
-        <div class="row d-flex align-items-center pb-5">
-
-                <!-- Start Pricing List -->
-                <div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
-                    <div class="row p-2">
-                        <div class="pricing-list-icon col-4 text-center m-auto text-secondary ml-5 py-2">
-                            <i class="fas fa-hand-holding-usd icon-report"></i>
-                            
+                <div class="row d-flex align-items-center pb-5">
+                    <div class="col-12">
+                        <!-- 113年捐款明細 -->
+                        <div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-4 mb-3">
+                            <div class="row p-2 align-items-center">
+                                <div class="pricing-list-icon col-4 col-md-3 text-center m-auto py-2">
+                                    <i class="fas fa-hand-holding-usd icon-report" aria-hidden="true"></i>
+                                </div>
+                                <div class="pricing-list-body col-4 col-md-5 align-items-center pl-3 pt-2">
+                                    <ul class="list-unstyled text-center light-300 mb-0">
+                                        <li class="h5 semi-bold-600 mb-0 mt-3">113年捐款明細</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-list-footer col-4 col-md-4 text-center m-auto align-items-center">
+                                    <a href="static/report_file/公開版113捐贈收入EXCEL1.pdf" target="_blank" rel="noopener noreferrer" 
+                                       class="btn rounded-pill px-4 btn-download light-300">查看</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pricing-list-body col-4 align-items-center pl-3 pt-2">
-                            <ul class="list-unstyled text-center light-300">
-                                <li class="h5 semi-bold-600 mb-0 mt-3">113年捐款明細</li>
-                            </ul>
+
+                        <!-- 113年損益表 -->
+                        <div class="pricing-list shadow-sm py-sm-0 py-4 mb-3">
+                            <div class="row p-2 align-items-center">
+                                <div class="pricing-list-icon col-4 col-md-3 text-center m-auto py-2">
+                                    <i class="fas fa-file-invoice-dollar icon-report" aria-hidden="true"></i>
+                                </div>
+                                <div class="pricing-list-body col-4 col-md-5 align-items-center pl-3 pt-2">
+                                    <ul class="list-unstyled text-center light-300 mb-0">
+                                        <li class="h5 semi-bold-600 mb-0 mt-3">113年損益表</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-list-footer col-4 col-md-4 text-center m-auto align-items-center">
+                                    <a href="static/report_file/揚帆113年損益表.pdf" target="_blank" rel="noopener noreferrer" 
+                                       class="btn rounded-pill px-4 btn-download light-300">查看</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="pricing-list-footer col-4 text-center m-auto align-items-center">
-                            <a href="static/report_file/公開版113捐贈收入EXCEL1.pdf"   target="_blank" class="btn rounded-pill px-4 btn-download light-300">查看</a>
+
+                        <!-- 113年資產負債表 -->
+                        <div class="pricing-list shadow-sm rounded-bottom rounded-3 py-sm-0 py-4">
+                            <div class="row p-2 align-items-center">
+                                <div class="pricing-list-icon col-4 col-md-3 text-center m-auto py-2">
+                                    <i class="fas fa-file icon-report" aria-hidden="true"></i>
+                                </div>
+                                <div class="pricing-list-body col-4 col-md-5 align-items-center pl-3 pt-2">
+                                    <ul class="list-unstyled text-center light-300 mb-0">
+                                        <li class="h5 semi-bold-600 mb-0 mt-3">113年資產負債表</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-list-footer col-4 col-md-4 text-center m-auto align-items-center">
+                                    <a href="static/report_file/揚帆113年資產負債表.pdf" target="_blank" rel="noopener noreferrer" 
+                                       class="btn rounded-pill px-4 btn-download light-300">查看</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- End Pricing List -->
+            </section>
+        </main>
 
-                <!-- Start Pricing List -->
-                <div class="pricing-list shadow-sm py-sm-0 py-5">
-                    <div class="row p-2">
-                        <div class="pricing-list-icon col-4 text-center m-auto text-secondary ml-5 py-2">
-                            <i class="fas fa-file-invoice-dollar icon-report"></i>
+        <!-- Footer -->
+        <footer class="bg-secondary pt-1 mt-auto" role="contentinfo">
+            <div class="w-100 bg-primary py-3">
+                <div class="container">
+                    <div class="row pt-2 align-items-center">
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-light light-300 div-right mb-0">
+                                <a class="text-light" href="donate.html" target="_blank" rel="noopener noreferrer" aria-label="捐款">
+                                    <i class="fas fa-donate bx-fb" aria-hidden="true"></i>
+                                </a>
+                                <a class="text-light" href="https://www.facebook.com/sail3405" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="fab fa-facebook bx-fb" aria-hidden="true"></i>
+                                </a>
+                                <a class="text-light" href="contact.html" aria-label="聯絡我們">
+                                    <i class="fab fa-line bx-fb" aria-hidden="true"></i>
+                                </a>
+                            </p>
                         </div>
-                        <div class="pricing-list-body col-4 align-items-center pl-3 pt-2">
-                            <ul class="list-unstyled text-center light-300">
-                                <li class="h5 semi-bold-600 mb-0 mt-3">113年損益表</li>
-                            </ul>
+                        <div class="col-lg-3 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-mail-send bx-xs" aria-hidden="true"></i>
+                                <a class="text-decoration-none text-light py-1" href="mailto:sail3405@gamil.com">sail3405@gamil.com</a>
+                            </p>
                         </div>
-                        <div class="pricing-list-footer col-4 text-center m-auto align-items-center">
-                            <a href="static/report_file/揚帆113年損益表.pdf"  target="_blank" class="btn rounded-pill px-4 btn-download light-300">查看</a>
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-phone bx-xs" aria-hidden="true"></i>
+                                <a class="text-decoration-none text-light py-1" href="tel:03-8663405">03-8663405</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-home bx-xs" aria-hidden="true"></i>
+                                地址：974花蓮縣壽豐鄉中山路三段106號
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-12">
+                            <p class="text-center text-light light-300 mb-0">
+                                ©Copyright 2021 台灣揚帆協會. All Rights Reserved.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <!-- End Pricing List -->
-
-                <!-- Start Pricing List -->
-                <div class="pricing-list shadow-sm rounded-botton rounded-3 py-sm-0 py-5">
-                    <div class="row p-2">
-                        <div class="pricing-list-icon col-4 text-center m-auto text-secondary ml-5 py-2">
-                            <i class="fas fa-file icon-report"></i>
-                        </div>
-                        <div class="pricing-list-body col-4 align-items-center pl-3 pt-2">
-                            <ul class="list-unstyled text-center light-300">
-                                <li class="h5 semi-bold-600 mb-0 mt-3">113年資產負債表</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-list-footer col-4 text-center m-auto align-items-center">
-
-                            <a href="static/report_file/揚帆113年資產負債表.pdf"  target="_blank" class="btn rounded-pill px-4 btn-download light-300">查看</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Pricing List -->
-
             </div>
-    </section>    
-
-
-</div>
-   <!-- Start Footer -->
-   <footer class="bg-secondary pt-1 ">
-    <div class="w-100 bg-primary py-3">
-        <div class="container">
-                <div class="row pt-2">
-
-                    <div class="col-lg-2 col-sm-12 col-md-12">
-                        <p class=" text-light  light-300 div-right" >
-                            <a class="text-light" target="_blank" href="/donate.html"> <i class="fas fa-donate  bx-fb"></i></a>
-                            <a class="text-light" target="_blank" href="https://www.facebook.com/sail3405"><i class="fab fa-facebook bx-fb"></i></a>
-                            <a class="text-light" target="_blank" href="contact.html"><i class="fab fa-line  bx-fb"></i></a>
-                        </p>
-                    </div>                   
-                    
-                    <div class="col-lg-3 col-md-12 col-sm-12">
-                        <p class="text-center text-light light-300">
-                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:sail3405@gamil.com">sail3405@gamil.com</a>
-                        </p>
-                    </div>                         
-        
-                    <div class="col-lg-2 col-sm-12 col-md-12">
-                        <p class="text-light text-center text-light light-300">
-                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:03-8663405">03-8663405</a>
-                        </p>
-                    </div>      
-                    <div class="col-lg-5 col-md-12 col-sm-12">
-                        <p class="text-center text-light light-300">
-                            <i class='bx-fw bx bx-home bx-xs'></i><a class="text-decoration-none text-light py-1">地址：974花蓮縣壽豐鄉中山路三段106號</a>                        
-                        </p>
-                    </div>   
-                </div>
-                <div class="row pt-2">
-                        <p class=" text-center text-light light-300">
-                            ©Copyright 2021 台灣揚帆協會. All Rights Reserved.
-                        </p>
-                </div>
-            </div>
+        </footer>
     </div>
-</footer>
-<!-- End Footer -->
 
-
-    <!-- Bootstrap -->
+    <!-- Scripts -->
     <script src="static/js/bootstrap.bundle.min.js"></script>
-    <!-- Load jQuery require for isotope -->
     <script src="static/js/jquery.min.js"></script>
-    <!-- Isotope -->
     <script src="static/js/isotope.pkgd.js"></script>
-    <!-- Page Script -->
-    <script>
-        
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function aboutFunction() {
-      document.getElementById("aboutDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }  
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-  
-    </script>
-    <!-- Templatemo -->
     <script src="static/js/templatemo.js"></script>
-    <!-- Custom -->
     <script src="static/js/custom.js"></script>
+    
+    <script>
+        function aboutFunction() {
+            const dropdown = document.getElementById("aboutDropdown");
+            dropdown.classList.toggle("show");
+        }
 
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
-
 </html>

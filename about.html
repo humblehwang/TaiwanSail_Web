@@ -1,67 +1,58 @@
 <!DOCTYPE html>
-
-<html lang="en">
-       
-
-  
+<html lang="zh-TW">
 <head>
-    <title>台灣揚帆協會 關於協會</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="/static/img/logo.JPG">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="台灣揚帆協會簡介 - 讓每位孩子揚起生命的帆，讓每位孩子都有溫暖的家">
+    <meta name="keywords" content="台灣揚帆協會, 協會簡介, 偏鄉教育, 生命品格教育">
+    <title>台灣揚帆協會 - 協會簡介</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="static/img/logo.JPG">
     <link rel="shortcut icon" type="image/x-icon" href="static/img/logo.JPG">
-    <!-- Load Require CSS -->
-    <link href="static/css/bootstrap.css" rel="stylesheet">
+    
+    <!-- CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font CSS -->
     <link href="static/css/boxicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Load Tempalte CSS -->
     <link rel="stylesheet" href="static/css/templatemo.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="static/css/custom.css">
-    <!-- icon -->
-    <script src="https://kit.fontawesome.com/a58d97a913.js" crossorigin="anonymous"></script>    
-<!--
     
-TemplateMo 561 Purple Buzz
-
-https://templatemo.com/tm-561-purple-buzz
-
--->
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a58d97a913.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div class='wrapper'>    
-   
-    <!-- Header -->
-    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow ">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand h1" href="index.html">
-                <img class="img-logo" src="static/img/twsail-logo.png">
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <div class="wrapper">
+        <!-- Navigation -->
+        <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow" role="navigation" aria-label="主要導航">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="台灣揚帆協會首頁">
+                    <img class="img-logo" src="static/img/twsail-logo.png" alt="台灣揚帆協會 Logo">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" 
+                        aria-expanded="false" aria-label="切換導航選單">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
-                <div class="flex-fill mx-xl-5 mb-2">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                <div class="collapse navbar-collapse" id="navbar-toggler-success">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex flex-wrap justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">Home</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="index.html">首頁</a>
                         </li>
-                        <li class="nav-item">
-                            <div class="dropdown">
-                                  <a  onclick="aboutFunction()" class="nav-link btn-outline-about rounded-about px-3  dropbtn">認識我們</a>
-                                  <div id="aboutDropdown" class="dropdown-content">
-
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="about.html">協會簡介</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="afterclass.html">課後照顧</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="eduaction.html">校園生命品格教育</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="camp.html">寒暑假營會</a>
-                                      <a class="nav-link btn-outline-primary rounded-pill px-3" href="teacher.html">師資訓練</a>
-                                  </div>
-                            </div>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn-outline-about rounded-about px-3 dropbtn" 
+                               href="#" id="aboutDropdownToggle" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false"
+                               onclick="aboutFunction(); return false;">認識我們</a>
+                            <ul id="aboutDropdown" class="dropdown-content dropdown-menu" aria-labelledby="aboutDropdownToggle">
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3 active" href="about.html">協會簡介</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="afterclass.html">課後照顧</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="eduaction.html">校園生命品格教育</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="camp.html">寒暑假營會</a></li>
+                                <li><a class="dropdown-item nav-link btn-outline-primary rounded-pill px-3" href="teacher.html">師資訓練</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="join.html">加入我們</a>
@@ -75,140 +66,113 @@ https://templatemo.com/tm-561-purple-buzz
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="report.html">財務報表</a>
                         </li>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                     </ul>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-
-    <!-- Start Banner Hero -->
-    <section >
-        <div class="container">
-            <div class="row row d-flex align-items-center py-5">
-                
-                <div class="col-lg-6">
-                    <h1 class="h2 py-5 text-primary typo-space-line">台灣揚帆協會</h1>
-                    <p class="light-about">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2007年協會成員看見偏鄉部落許多弱勢家庭的孩子，因家庭困境無法得到妥善照顧，導致營養不足，文化貧乏(Cultural deprivation )，學習落後，天生才能無法發揮。甚至因家庭環境因素產生偏差行為及思想。<br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 因此協會編寫小一至國中九年級，適合偏鄉地區兒童、青少年之生命品格教育教材，在四十多所國中、國小校園進行四千多位孩子，每學期13週，每週一堂課之生命品格教育，在孩子人格發展最重要的階段中施行品格教育。且在八個部落社區進行弱勢家庭兒童青少年課後照顧班，內容有課業輔導、空中英語教室、肢體統合遊戲、遊戲治療、各項才藝班、國際品格創意營及青少年勇士戰鬥營會，供應營養豐富的點心和晚餐，在孩子家庭發生困境時，仍能得到好的培育、照顧，同時透過家訪、親子講座、協助困難家庭申請物資、急難救助，陪伴孩子家庭渡過困境，能用比較好的方式教養、關懷孩子。<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深盼孩子天生才能得以發揮，影響家庭、族群、國家社會正向發展。讓每一個孩子都有溫暖的家，讓每一位孩子都能揚起生命的帆，航向光明燦爛的未來。
-
-                    </p>
+        <!-- Main Content -->
+        <main class="content">
+            <section class="py-5" aria-label="協會簡介">
+                <div class="container">
+                    <div class="row d-flex align-items-center py-5">
+                        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                            <h1 class="h2 py-3 py-lg-5 text-primary typo-space-line">台灣揚帆協會</h1>
+                            <div class="light-about">
+                                <p>
+                                    2007年協會成員看見偏鄉部落許多弱勢家庭的孩子，因家庭困境無法得到妥善照顧，導致營養不足，文化貧乏(Cultural deprivation)，學習落後，天生才能無法發揮。甚至因家庭環境因素產生偏差行為及思想。
+                                </p>
+                                <p>
+                                    因此協會編寫小一至國中九年級，適合偏鄉地區兒童、青少年之生命品格教育教材，在四十多所國中、國小校園進行四千多位孩子，每學期13週，每週一堂課之生命品格教育，在孩子人格發展最重要的階段中施行品格教育。且在八個部落社區進行弱勢家庭兒童青少年課後照顧班，內容有課業輔導、空中英語教室、肢體統合遊戲、遊戲治療、各項才藝班、國際品格創意營及青少年勇士戰鬥營會，供應營養豐富的點心和晚餐，在孩子家庭發生困境時，仍能得到好的培育、照顧，同時透過家訪、親子講座、協助困難家庭申請物資、急難救助，陪伴孩子家庭渡過困境，能用比較好的方式教養、關懷孩子。
+                                </p>
+                                <p>
+                                    深盼孩子天生才能得以發揮，影響家庭、族群、國家社會正向發展。讓每一個孩子都有溫暖的家，讓每一位孩子都能揚起生命的帆，航向光明燦爛的未來。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 offset-lg-1 col-md-12">
+                            <a href="static/img/twsail-history.png" target="_blank" aria-label="查看協會歷史圖片">
+                                <img class="img-about" src="static/img/twsail-history.png" alt="台灣揚帆協會歷史">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-5 offset-lg-1">
-                    <a href="static/img/twsail-history.png"  target="_blank"><img class="img-about" src="static/img/twsail-history.png" ></a>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-secondary pt-1 mt-auto" role="contentinfo">
+            <div class="w-100 bg-primary py-3">
+                <div class="container">
+                    <div class="row pt-2 align-items-center">
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-light light-300 div-right mb-0">
+                                <a class="text-light" href="donate.html" target="_blank" rel="noopener noreferrer" aria-label="捐款">
+                                    <i class="fas fa-donate bx-fb" aria-hidden="true"></i>
+                                </a>
+                                <a class="text-light" href="https://www.facebook.com/sail3405" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                    <i class="fab fa-facebook bx-fb" aria-hidden="true"></i>
+                                </a>
+                                <a class="text-light" href="contact.html" aria-label="聯絡我們">
+                                    <i class="fab fa-line bx-fb" aria-hidden="true"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-mail-send bx-xs" aria-hidden="true"></i>
+                                <a class="text-decoration-none text-light py-1" href="mailto:sail3405@gamil.com">sail3405@gamil.com</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-2 col-md-12 col-sm-12 mb-3 mb-lg-0">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-phone bx-xs" aria-hidden="true"></i>
+                                <a class="text-decoration-none text-light py-1" href="tel:03-8663405">03-8663405</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-5 col-md-12 col-sm-12">
+                            <p class="text-center text-light light-300 mb-0">
+                                <i class="bx-fw bx bx-home bx-xs" aria-hidden="true"></i>
+                                地址：974花蓮縣壽豐鄉中山路三段106號
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-12">
+                            <p class="text-center text-light light-300 mb-0">
+                                ©Copyright 2021 台灣揚帆協會. All Rights Reserved.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-    </section>
-    <!-- End Banner Hero -->
-
-
-
-</div>
-
-   <!-- Start Footer -->
-   <footer class="bg-secondary pt-1 ">
-    <div class="w-100 bg-primary py-3">
-        <div class="container">
-                <div class="row pt-2">
-
-                    <div class="col-lg-2 col-sm-12 col-md-12">
-                        <p class=" text-light  light-300 div-right" >
-                            <a class="text-light" target="_blank" href="/donate.html"> <i class="fas fa-donate  bx-fb"></i></a>
-                            <a class="text-light" target="_blank" href="https://www.facebook.com/sail3405"><i class="fab fa-facebook bx-fb"></i></a>
-                            <a class="text-light" target="_blank" href="contact.html"><i class="fab fa-line  bx-fb"></i></a>
-                        </p>
-                    </div>                   
-                    
-                    <div class="col-lg-3 col-md-12 col-sm-12">
-                        <p class="text-center text-light light-300">
-                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1" href="mailto:sail3405@gamil.com">sail3405@gamil.com</a>
-                        </p>
-                    </div>                         
-        
-                    <div class="col-lg-2 col-sm-12 col-md-12">
-                        <p class="text-light text-center text-light light-300">
-                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" href="tel:03-8663405">03-8663405</a>
-                        </p>
-                    </div>      
-                    <div class="col-lg-5 col-md-12 col-sm-12">
-                        <p class="text-center text-light light-300">
-                            <i class='bx-fw bx bx-home bx-xs'></i><a class="text-decoration-none text-light py-1">地址：974花蓮縣壽豐鄉中山路三段106號</a>                        
-                        </p>
-                    </div>   
-                </div>
-                <div class="row pt-2">
-                        <p class=" text-center text-light light-300">
-                            ©Copyright 2021 台灣揚帆協會. All Rights Reserved.
-                        </p>
-                </div>
-            </div>
+        </footer>
     </div>
-</footer>
-<!-- End Footer -->
 
-
-    <!-- Bootstrap -->
+    <!-- Scripts -->
     <script src="static/js/bootstrap.bundle.min.js"></script>
-    <!-- Load jQuery require for isotope -->
     <script src="static/js/jquery.min.js"></script>
-    <!-- Isotope -->
     <script src="static/js/isotope.pkgd.js"></script>
-    <!-- Page Script -->
-    <script>
-        
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function aboutFunction() {
-      document.getElementById("aboutDropdown").classList.toggle("show");
-    }
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }  
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-  
-    </script>
-    <!-- Templatemo -->
     <script src="static/js/templatemo.js"></script>
-    <!-- Custom -->
     <script src="static/js/custom.js"></script>
-</body>
+    
+    <script>
+        function aboutFunction() {
+            const dropdown = document.getElementById("aboutDropdown");
+            dropdown.classList.toggle("show");
+        }
 
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown')) {
+                const dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
 </html>
