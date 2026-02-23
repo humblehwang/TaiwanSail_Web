@@ -1,39 +1,43 @@
-/*
- * Custom CSS for Taiwan Sail Association
- * Optimized for RWD, Modern Color Scheme, and Clean Code Structure
- */
 
-/* ============================================
-   CRITICAL: Override Bootstrap Purple Color FIRST
-   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
 * {
   --bs-primary: #d7978c !important;
   --bs-primary-rgb: 215, 151, 140 !important;
 }
 
 :root {
-  /* Override Bootstrap primary color FIRST */
   --bs-primary: #d7978c !important;
   --bs-primary-rgb: 215, 151, 140 !important;
   --bs-primary-bg-subtle: #f5e8e5 !important;
   --bs-primary-border-subtle: #e8b5ab !important;
   --bs-primary-text-emphasis: #8b5d52 !important;
   
-  /* Custom color variables */
+  --font-sans: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
   --primary-color: #d7978c;
   --primary-dark: #c0857a;
   --primary-light: #e8b5ab;
   --secondary-color: #d7978c;
   --text-dark: #333333;
-  --text-muted: #6c757d;
+  --text-muted: #5c636a;
   --bg-light: #f8f9fa;
   --bg-white: #ffffff;
   --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.12);
   --transition: all 0.3s ease;
+  --section-padding-y: 3rem;
+  --container-max: 1140px;
 }
 
-/* Force override Bootstrap text-primary FIRST - highest priority */
+html,
+body {
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .text-primary,
 .text-primary:hover,
 .text-primary:focus,
@@ -64,7 +68,6 @@ section .h2.text-primary,
   color: #d7978c !important;
 }
 
-/* Extra override for any remaining purple */
 [class*="text-primary"],
 [style*="color: #4232c2"],
 [style*="color:#4232c2"],
@@ -73,7 +76,6 @@ section .h2.text-primary,
   color: #d7978c !important;
 }
 
-/* Force override ALL Bootstrap primary buttons - highest priority */
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:focus,
@@ -114,20 +116,161 @@ section .h2.text-primary,
   border-color: #d7978c !important;
 }
 
-/* ============================================
-   Base Styles
-   ============================================ */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
+html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
-/* ============================================
-   Container Styles
-   ============================================ */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.page-section:first-of-type {
+  padding-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .page-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}
+
+.container {
+  max-width: var(--container-max);
+}
+
+.page-title {
+  color: #d7978c;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.donate-intro-section .donate-intro-text {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.donate-intro-title {
+  color: var(--primary-color);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.donate-intro-desc {
+  color: var(--text-dark);
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.85;
+  margin: 0 0 2rem;
+  opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+  .donate-intro-title {
+    margin-bottom: 0.75rem;
+  }
+  .donate-intro-desc {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.gallery-link:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-link:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .gallery-img {
+    height: 240px;
+  }
+}
+.content-img,
+main section img.img-fluid,
+main .img-fluid {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.content-img-lg {
+  max-height: 420px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .content-img-lg {
+    max-height: 280px;
+  }
+}
+
+.content-img-sm {
+  max-height: 260px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .content-img-sm {
+    max-height: 220px;
+  }
+}
+
+.service-work .card-img-top,
+.card .card-img-top {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: var(--bg-light);
+}
+
+@media (max-width: 768px) {
+  .service-work .card-img-top,
+  .card .card-img-top {
+    height: 200px;
+  }
+}
+
 .container-home {
   width: 90%;
   padding-right: var(--bs-gutter-x, 0.75rem);
@@ -184,47 +327,100 @@ body {
   }
 }
 
-/* ============================================
-   Wrapper & Layout
-   ============================================ */
-.wrapper {
-  margin-bottom: -55px;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
+.wrapper,
 .wrapper-home {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.content {
-  min-height: 100%;
-  margin-bottom: -55px;
-  padding-bottom: 55px;
+  min-height: 100vh;
   flex: 1;
+  background-color: var(--bg-white);
 }
 
-/* ============================================
-   Footer Styles
-   ============================================ */
+.content,
+.wrapper .content,
+.wrapper-home .content {
+  flex: 1 0 auto;
+}
+
 footer {
   height: auto;
-  min-height: 55px;
-  margin-top: auto;
+  flex-shrink: 0;
+  background-color: var(--primary-color) !important;
+}
+
+footer .bg-primary,
+footer .footer-inner {
+  padding: 1.25rem 0 1rem;
+}
+
+footer .row.align-items-center,
+footer .footer-row {
+  align-items: center;
+  row-gap: 0.75rem;
+}
+
+footer .row.align-items-center [class^="col-"],
+footer .footer-row [class^="col-"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+footer .row.align-items-center [class^="col-"] p,
+footer .footer-row [class^="col-"] p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+footer .bx-fb {
+  margin: 0 0.4rem;
+}
+
+footer .row.pt-2:last-child,
+footer .footer-copyright {
+  padding-top: 1rem !important;
+  margin-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+footer .row.pt-2:last-child p,
+footer .footer-copyright p {
+  font-size: 0.9rem;
+  opacity: 0.95;
 }
 
 @media (max-width: 768px) {
   footer {
+    padding: 0;
+  }
+  footer .bg-primary,
+  footer .footer-inner {
     padding: 1rem 0;
+  }
+  footer .row.align-items-center [class^="col-"],
+  footer .footer-row [class^="col-"] {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  footer .row.align-items-center [class^="col-"]:last-child,
+  footer .footer-row [class^="col-"]:last-child {
+    margin-bottom: 0;
   }
 }
 
-/* ============================================
-   Navigation Styles
-   ============================================ */
+#main_nav,
+nav.navbar.navbar-expand-lg {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: var(--transition);
+}
+
 .navbar {
   transition: var(--transition);
 }
@@ -248,7 +444,6 @@ footer {
   transform: translateY(-2px);
 }
 
-/* Ensure all nav links with btn-outline-primary use consistent color - HIGHEST PRIORITY */
 a.nav-link.btn-outline-primary,
 .navbar-nav .nav-link.btn-outline-primary,
 .nav-item .nav-link.btn-outline-primary {
@@ -275,9 +470,6 @@ a.nav-link.btn-outline-primary:active,
   box-shadow: 0 0 0 0.25rem rgba(215, 151, 140, 0.25) !important;
 }
 
-/* ============================================
-   Dropdown Menu
-   ============================================ */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -319,9 +511,103 @@ a.nav-link.btn-outline-primary:active,
   display: block;
 }
 
-/* ============================================
-   Carousel Styles
-   ============================================ */
+.home-hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero-inner {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background: #f0f0f0;
+}
+
+.home-hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.5rem 2.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+  color: #fff;
+  text-align: center;
+  pointer-events: none;
+}
+
+.home-hero-title {
+  font-family: var(--font-sans);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.home-hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.95;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: 768px) {
+  .home-hero-inner {
+    padding-bottom: 42%;
+  }
+
+  .home-hero-overlay {
+    padding: 2.5rem 2rem 3rem;
+  }
+
+  .home-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .home-hero-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-hero-inner {
+    padding-bottom: 38%;
+  }
+
+  .home-hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+.cta-section {
+  background-color: var(--primary-color);
+}
+
+.cta-section .btn-light {
+  color: #c0857a !important;
+  font-weight: 600;
+}
+
+.cta-section .btn-outline-light:hover {
+  color: var(--primary-color) !important;
+  background-color: #fff !important;
+  border-color: #fff !important;
+}
+
 .carousel {
   position: relative;
 }
@@ -404,9 +690,6 @@ a.nav-link.btn-outline-primary:active,
   }
 }
 
-/* ============================================
-   Button Styles
-   ============================================ */
 .btn-primary {
   text-decoration: none;
   color: var(--bg-white) !important;
@@ -425,7 +708,6 @@ a.nav-link.btn-outline-primary:active,
   box-shadow: var(--shadow-md);
 }
 
-/* Disable hover for donation page buttons (捐款支持, 物資供應) */
 .donate-page .btn-primary,
 .donate-page .btn-primary:hover,
 .donate-page .btn-primary:focus,
@@ -435,7 +717,6 @@ a.nav-link.btn-outline-primary:active,
   cursor: default !important;
 }
 
-/* More specific: disable hover and change color for span elements with btn-primary */
 span.btn-primary,
 span.btn-primary:hover,
 span.btn-primary:focus,
@@ -444,7 +725,6 @@ span.btn-primary:active {
   box-shadow: none !important;
   cursor: default !important;
   pointer-events: none;
-  /* Change to darker color for better visibility - use dark brown/red */
   background-color: #8b5d52 !important;
   border-color: #8b5d52 !important;
   color: #ffffff !important;
@@ -478,6 +758,25 @@ span.btn-primary:active {
   box-shadow: 0 4px 8px rgba(215, 151, 140, 0.3) !important;
 }
 
+a.btn.btn-outline-primary,
+button.btn.btn-outline-primary {
+  background-color: #c0857a !important;
+  border-color: #c0857a !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+a.btn.btn-outline-primary:hover,
+a.btn.btn-outline-primary:focus,
+a.btn.btn-outline-primary:active,
+button.btn.btn-outline-primary:hover,
+button.btn.btn-outline-primary:focus,
+button.btn.btn-outline-primary:active {
+  background-color: #a86a5f !important;
+  border-color: #a86a5f !important;
+  color: #ffffff !important;
+}
+
 .btn-outline-about {
   background-color: transparent !important;
   border-color: transparent !important;
@@ -504,9 +803,6 @@ span.btn-primary:active {
   transform: translateY(-2px);
 }
 
-/* ============================================
-   Image Styles
-   ============================================ */
 .img-logo {
   width: 200px;
   height: auto;
@@ -531,9 +827,7 @@ span.btn-primary:active {
   width: 100%;
 }
 
-/* Carousel Image Container */
 .carousel-inner {
-  border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -572,39 +866,74 @@ span.btn-primary:active {
 }
 
 .img-about {
-  width: 80%;
+  width: 100%;
+  max-width: 100%;
   height: auto;
+  min-height: 280px;
   display: block;
   margin: 0 auto;
-  vertical-align: middle;
-  padding-bottom: 55px;
+  object-fit: contain;
+  object-position: center;
+  padding-bottom: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: var(--shadow-md);
 }
 
+main .img-about {
+  max-height: none;
+}
+
 @media (max-width: 768px) {
   .img-about {
-    width: 100%;
-    padding-bottom: 2rem;
+    min-height: 200px;
+    padding-bottom: 1rem;
   }
 }
 
 .img-join {
-  width: 60%;
+  width: 120px;
   height: auto;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
-  vertical-align: middle;
   transition: var(--transition);
 }
 
 .img-join:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .img-join {
-    width: 80%;
+    width: 140px;
+  }
+}
+
+.join-cards-row {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-card {
+  background: var(--bg-white);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.join-card-icon {
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.join-card-icon a {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .join-card-icon {
+    min-height: 140px;
   }
 }
 
@@ -618,10 +947,6 @@ span.btn-primary:active {
   box-shadow: var(--shadow-md);
 }
 
-/* ============================================
-   Typography
-   ============================================ */
-/* Override typo-space-line decoration color */
 .typo-space-line::after,
 .typo-space-line-center::after,
 .text-primary.typo-space-line::after,
@@ -634,7 +959,6 @@ h2.text-primary.typo-space-line::after,
   border-bottom-color: #d7978c !important;
 }
 
-/* Override Bootstrap text-primary - HIGHEST PRIORITY */
 .text-primary,
 .text-primary:hover,
 .text-primary:focus,
@@ -655,25 +979,25 @@ div .text-primary,
 }
 
 .light-300 {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: var(--font-sans) !important;
   font-weight: 300;
 }
 
 .light-donate {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: var(--font-sans) !important;
   font-weight: 300;
   font-size: 1.125rem;
   line-height: 1.6;
 }
 
 .light-donate-note {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: var(--font-sans) !important;
   font-weight: 300;
   font-size: 1rem;
 }
 
 .light-about {
-  font-family: 'Open Sans', sans-serif !important;
+  font-family: var(--font-sans) !important;
   font-weight: 300;
   font-size: 1.25rem;
   line-height: 1.8;
@@ -688,9 +1012,6 @@ div .text-primary,
   }
 }
 
-/* ============================================
-   Icon Styles
-   ============================================ */
 .icon-report {
   font-weight: 300;
   line-height: 1.2;
@@ -740,9 +1061,6 @@ div .text-primary,
   }
 }
 
-/* ============================================
-   Background Colors
-   ============================================ */
 .bg-primary {
   background-color: var(--primary-color) !important;
 }
@@ -751,7 +1069,6 @@ div .text-primary,
   background-color: var(--primary-color) !important;
 }
 
-/* Override Bootstrap primary color completely - Force #d7978c */
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
@@ -783,7 +1100,6 @@ div .text-primary,
   border-color: #d7978c !important;
 }
 
-/* Remove any purple colors from Bootstrap */
 [class*="btn-primary"],
 [class*="btn-outline-primary"] {
   --bs-btn-color: #ffffff !important;
@@ -797,9 +1113,6 @@ div .text-primary,
   --bs-btn-active-border-color: #c0857a !important;
 }
 
-/* ============================================
-   Footer Responsive Styles
-   ============================================ */
 @media screen and (max-width: 992px) {
   .div-right {
     text-align: center;
@@ -812,9 +1125,11 @@ div .text-primary,
   }
 }
 
-/* ============================================
-   Card Styles
-   ============================================ */
+footer .div-right {
+  float: none;
+  text-align: center;
+}
+
 .card {
   transition: var(--transition);
   border: none;
@@ -839,9 +1154,6 @@ div .text-primary,
   transform: scale(1.05);
 }
 
-/* ============================================
-   Contact Section
-   ============================================ */
 .contact {
   margin-bottom: 2rem;
   padding: 1.5rem;
@@ -862,9 +1174,6 @@ div .text-primary,
   }
 }
 
-/* ============================================
-   Pricing List (Report Page)
-   ============================================ */
 .pricing-list {
   margin-bottom: 1rem;
   transition: var(--transition);
@@ -887,16 +1196,10 @@ div .text-primary,
   }
 }
 
-/* ============================================
-   Utility Classes
-   ============================================ */
 .rounded-about {
   border-radius: 50rem !important;
 }
 
-/* ============================================
-   Responsive Typography
-   ============================================ */
 @media (max-width: 576px) {
   h1 {
     font-size: 1.75rem;
@@ -909,9 +1212,6 @@ div .text-primary,
   }
 }
 
-/* ============================================
-   Accessibility Improvements
-   ============================================ */
 a:focus,
 button:focus {
   outline: 2px solid var(--primary-color);
@@ -933,9 +1233,6 @@ button:focus {
   top: 0;
 }
 
-/* ============================================
-   Print Styles
-   ============================================ */
 @media print {
   .navbar,
   footer,
@@ -945,10 +1242,6 @@ button:focus {
   }
 }
 
-/* ============================================
-   FINAL OVERRIDE - Remove ALL purple colors - ABSOLUTE LAST
-   ============================================ */
-/* Force remove any remaining purple (#4232c2, #382ba5, #35289b) */
 [style*="#4232c2"],
 [style*="#382ba5"],
 [style*="#35289b"],
@@ -963,12 +1256,10 @@ button:focus {
   color: #d7978c !important;
 }
 
-/* Ultimate override - target any element with purple color */
 * {
   --bs-primary: #d7978c !important;
 }
 
-/* ABSOLUTE FINAL OVERRIDE - Must be at the very end */
 h1.text-primary,
 h1.h2.text-primary,
 .h2.text-primary,
@@ -985,17 +1276,15 @@ main .h2.text-primary {
   color: #d7978c !important;
 }
 
-/* Final override for buttons */
 span.btn-primary,
 h3 span.btn-primary,
 .container span.btn-primary {
-  background-color: #8b5d52 !important;
-  border-color: #8b5d52 !important;
+  background-color: #c0857a !important;
+  border-color: #c0857a !important;
   color: #ffffff !important;
   font-weight: 600 !important;
 }
 
-/* Final override for any Bootstrap primary that might slip through */
 .btn-primary[class*="primary"],
 .btn-outline-primary[class*="primary"],
 .nav-link[class*="primary"] {
@@ -1012,10 +1301,6 @@ h3 span.btn-primary,
   color: #ffffff !important;
 }
 
-/* ============================================
-   ABSOLUTE FINAL OVERRIDE - MUST BE LAST
-   ============================================ */
-/* Override h1.h2.text-primary specifically */
 h1.h2.text-primary,
 h1.text-primary.h2,
 .container h1.h2.text-primary,
@@ -1027,21 +1312,26 @@ main h1.text-primary.h2 {
   color: #d7978c !important;
 }
 
-/* Override span.btn-primary for donation page */
 span.btn-primary,
 h3 span.btn-primary,
 .container h3 span.btn-primary,
 .row h3 span.btn-primary {
-  background-color: #8b5d52 !important;
-  border-color: #8b5d52 !important;
+  background-color: #c0857a !important;
+  border-color: #c0857a !important;
   color: #ffffff !important;
   font-weight: 600 !important;
   display: inline-block !important;
 }
 
-/* ============================================
-   Recruitment Poster Style (工讀生/志工招募海報)
-   ============================================ */
+.transition-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.transition-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
 .recruitment-slide {
   display: block;
   text-decoration: none;
@@ -1064,7 +1354,7 @@ h3 span.btn-primary,
 }
 
 .recruitment-top-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-sans);
   font-size: 1.5rem;
   color: #6c757d;
   margin-bottom: 2rem;
@@ -1073,7 +1363,7 @@ h3 span.btn-primary,
 }
 
 .recruitment-title {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-sans);
   font-size: 4rem;
   color: #d7978c;
   font-weight: 600;
@@ -1083,7 +1373,7 @@ h3 span.btn-primary,
 }
 
 .recruitment-bottom-text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-sans);
   font-size: 2rem;
   color: #d7978c;
   margin-top: 2rem;
@@ -1092,7 +1382,6 @@ h3 span.btn-primary,
   padding-right: 1rem;
 }
 
-/* Watercolor decoration */
 .watercolor-decoration {
   position: absolute;
   left: 0;
@@ -1141,7 +1430,6 @@ h3 span.btn-primary,
   );
 }
 
-/* Add some decorative elements */
 .recruitment-poster::before,
 .recruitment-poster::after {
   content: '';

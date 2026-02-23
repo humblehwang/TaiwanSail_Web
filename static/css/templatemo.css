@@ -1,22 +1,5 @@
-/*
-
-TemplateMo 561 Purple Buzz
-
-https://templatemo.com/tm-561-purple-buzz
-
----------------------------------------------
-Table of contents
-------------------------------------------------
-1. Typographyf
-4. About
-5. Work
-6. Single Work
-7. Pricing
-8. Contact
---------------------------------------------- */
 
 html {font-family: 'Open Sans', sans-serif;}
-/* Typography */
 p, a {font-weight: 400;}
 .h2 {font-size: 40px;}
 .h3 {font-size: 28px;}
@@ -45,12 +28,8 @@ p, a {font-weight: 400;}
   left: 50%;
   margin-left: -75px;
 }
-/* Main Nav */
 #main_nav .nav-item .nav-link:hover {color: #fff;}
-/* Home */
 #index_banner {
- /* background-image: url('./../img/about_background.jpg'); 
-  background-color:#FFFCFC; */
   background-position: center center; background-size: cover;
 
 }
@@ -119,7 +98,6 @@ p, a {font-weight: 400;}
   color: white;
   transition: .5s;
 }
-/* About */
 #work_banner {
   background-image: url('./../img/banner-bg-02.jpg');
   background-position: center center; background-size: cover;
@@ -155,8 +133,6 @@ p, a {font-weight: 400;}
   padding: 10px !important;
 }
 
-/* Work */
-/* Singel Work */
 #work_single_banner {
   background-image: url('./../img/banner-bg-02.jpg');
   background-position: center center;
@@ -168,7 +144,6 @@ p, a {font-weight: 400;}
   border-radius: 20px;
   cursor: pointer;
 }
-/* Pricing */
 .pricing-list {
   margin-bottom: 1px;
 }
@@ -180,11 +155,9 @@ p, a {font-weight: 400;}
 .pricing-horizontal {
   border-radius: 15px !important;
 }
-/* Contact */
 #floatingtextarea {
   height: 150px
 }
-/* bg-primary */
 footer a.text-light:hover {
   color: #bfbfbf !important;
   transition-duration: 0.15s;
